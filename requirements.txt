@@ -3,6 +3,9 @@ langchain
 langchain-community
 langchain-openai
 langchain-core
+langchain-astradb
+datasets
+flask
 openai
 pypdf
 tiktoken
