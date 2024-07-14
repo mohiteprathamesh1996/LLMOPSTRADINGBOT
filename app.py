@@ -8,7 +8,12 @@ app = Flask(__name__)
 
 load_dotenv()
 
-vstore,inserted_ids=ingestdata(status=None)
+# If data is not available on Vector Database
+# vstore,inserted_ids=ingestdata(status=None) 
+
+ # If data is available on Vector Database
+vstore=ingestdata(status="Done")
+
 chain=generation(vstore)
 
 @app.route("/")

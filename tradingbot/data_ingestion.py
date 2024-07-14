@@ -31,7 +31,7 @@ def ingestdata(status):
     if storage==None:
         docs=load_file()
         try:
-            docs = [Document(text) for text in tqdm(docs)]
+            docs = [Document(text) for text in docs]
             inserted_ids = vstore.add_documents(docs)
         except Exception as e:
              pass
